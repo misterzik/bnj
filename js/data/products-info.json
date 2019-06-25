@@ -1,0 +1,41 @@
+[{
+        "sku": "1",
+        "name": "Product",
+        "retail_price": "172",
+        "price": "77",
+        "quantity": "1",
+        "skin_color": "red",
+        "gender": "male",
+        "image": "/images/products.png"
+    },
+    {
+        "sku": "2",
+        "name": "Product II",
+        "retail_price": "172",
+        "price": "77",
+        "quantity": "1",
+        "skin_color": "red",
+        "gender": "male",
+        "image": "/images/products.png"
+    },
+    {
+        "sku": "3",
+        "name": "Product III",
+        "retail_price": "172",
+        "price": "77",
+        "quantity": "1",
+        "skin_color": "red",
+        "gender": "female",
+        "image": "/images/products.png"
+    },
+    {
+        "sku": "4",
+        "name": "Product IV",
+        "retail_price": "172",
+        "price": "77",
+        "quantity": "1",
+        "skin_color": "red",
+        "gender": "female",
+        "image": "/images/products.png"
+    }
+]

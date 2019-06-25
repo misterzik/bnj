@@ -1,0 +1,57 @@
+<div class="container">
+    <ol class="breadcrumb" style="margin-bottom: 5px;">
+        <li>
+            <a href="#/">Home</a>
+        </li>
+        <li>
+            <a href="#/Products/Categories/">Categories</a>
+        </li>
+        <li class="#/Products/Category/Groceries">Jewelry</li>
+    </ol>
+    <br />
+    <div class="col-lg-4">
+        <div class="jumbotron">
+            <h3>Hot Deals !</h3>
+            <ul>
+                <li class="itemHolder" ng-repeat="item in todos">
+                    <a href="#/Products/Category/Groceries/{{item.sku}}">
+                        <div>
+                            <h3>
+                                {{item.name}}</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="jumbotron">
+            <h3>Best Internet Deals</h3>
+            <ul>
+                <li class="itemHolder" ng-repeat="item in todos">
+                    <a href="#/Products/Category/Groceries/{{item.sku}}">
+                        <div>
+                            <h3>
+                                {{item.name}}</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="jumbotron">
+            <h3>More Deals</h3>
+            <ul>
+                <li class="itemHolder" ng-repeat="item in todos">
+                    <a href="#/Products/Category/Groceries/{{item.sku}}">
+                        <div>
+                            <h3>
+                                {{item.name}}</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

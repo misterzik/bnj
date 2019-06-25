@@ -1,78 +1,70 @@
 <!doctype html>
+<html lang="en" ng-app="bnjApp">
 
-<html lang="en" ng-app="gemSapp">
-  <head>
+<head>
     <meta charset="utf-8">
-    <base href="/bnj/">
+    <base href="/">
     <title></title>
-    <meta content="Site Description" name="description">
-    <meta content="Name" name="author">
-    <meta content="Nick Rodriguez" name="designer">
-
-    <link href="css/style.css" rel="stylesheet">
+    <meta content="From the vault - BNJ Boiler-Template" name="description">
+    <meta content="MisterZik" name="author">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/legacy/bootstrap.3.3.6.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" rel="stylesheet">
     <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-  </head>
+</head>
 
-  <body class="ng-cloak">
-
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand active" href="#/">BestNJDeals</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#/">Home</a></li>
-          <li><a href="#/Products">All Deals</a></li>
-          <li><a href="#/Products/Category/Jewelry">Deals by Category</a></li>
-          <!--<li><a href="#/">Blog</a></li>-->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-    <div ng-view></div>
-
-<footer>
-  <div class="container">
-  <div class="footer">
-    <a href="http://insanen.com" alt="With Love By Insanen Solutions." target="_blank">
-              <a class="pull-left" border="0">
-                <h5>&copy Copyright 2005-2016</h5>
-            </a>
-
-    <a href="http://insanen.com" alt="With Love By Insanen Solutions." target="_blank">
-              <img class="pull-right footer-ins" border="0" />
-            </a>
-</div>
-</div>
-</footer>
-    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-resource.min.js"></script>
+<body class="ng-cloak">
+    <header ng-controller="GlobalController">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                    <a class="navbar-brand active" href="#/"> {{brandLabel}}</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav" ng-repeat="item in navObj">
+                        <li><a href="{{item.urlNavLink}}">{{item.labelNavLink}}</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{login}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div ng-view class="main-frame"></div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="http://insanen.com" alt="With Love By Insanen Solutions." target="_blank">
+                    <a class="pull-left" border="0">
+                        <h5>&copy Copyright BNJ</h5>
+                    </a>
+                    <a href="https://github.com/misterzik" class="pull-right" border="0">
+                        <h5>Made with &hearts; by MisterZik &copy 2015</h5>
+                    </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/legacy/jquery-2.2.0.js"></script>
+    <script src="./js/legacy/bootstrap.3.3.6.min.js"></script>
+    <script src="./js/legacy/angular.1.5.rc.min.js"></script>
+    <script src="./js/legacy/angular-route.1.5.rc.min.js"></script>
+    <script src="./js/legacy/angular-resource.1.5.rc.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/RestCont.js"></script>
-    <script src="js/DisplayCont.js"></script>
+    <script src="js/getProducts.js"></script>
+    <script src="js/products.js"></script>
 
     <script>
-    jQuery(function () {
-jQuery('#myTab a:last').tab('show')
-})
+        jQuery(function() {
+            jQuery('#myTab a:last').tab('show')
+        })
     </script>
 
-  </body>
+</body>
+
 </html>

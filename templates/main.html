@@ -1,108 +1,52 @@
-<div class="carousel slide" id="Carousel">
-  <ol class="carousel-indicators">
-    <li class="active" data-slide-to="0" data-target="Carousel"></li>
-    <li data-slide-to="1" data-target="Carousel"></li>
-  </ol>
-  <div class="carousel-inner mainBanner">
-    <div class="item active" align="center">
-      <img class="img-responsive" height="250px" src="images/deals.jpg">
+<div ng-controller="MainController">
+    <div class="carousel slide" id="Carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="Carousel"></li>
+            <li data-slide-to="1" data-target="Carousel"></li>
+        </ol>
+        <div class="carousel-inner main-banner">
+            <div class="item active" align="center">
+                <img class="img-responsive" height="250px" src="images/deals.jpg">
+            </div>
+            <div class="item" align="center">
+                <img class="img-responsive" height="250px" style="margin-top: -6em;" src="images/great_deals.jpg">
+            </div>
+        </div>
+        <span class="left carousel-control" data-slide="prev" data-target="#Carousel">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </span>
+        <span class="right carousel-control" data-slide="next" data-target="#Carousel">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </span>
     </div>
-    <div class="item" align="center">
-      <img class="img-responsive" height="250px" style="margin-top: -6em;" src="images/great_deals.jpg">
+    <div class="main-container">
+        <div align="center" class="ads-center">
+            <img src="https://via.placeholder.com/468x60?text=YOUR+ADS+HERE">
+        </div>
+        <div class="container">
+            <!-- Cabinets -->
+            <div ng-repeat="item in tilesObj" class="{{item.col}}">
+                <div class="jumbotron">
+                    <h1 class="tiles-icons">
+                        <i class="{{item.icon}}"></i>
+                    </h1>
+                    <h3 class="tiles-title">
+                        <a href="{{item.link}}">{{item.name}}</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Who are we?</h1>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                </div>
+                <div class="col-md-3">
+                    <div align="center" class="ads-center">
+                        <img src="https://via.placeholder.com/468x320?text=YOUR+IMAGE">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <span class="left carousel-control" data-slide="prev" data-target="#Carousel">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </span>
-  <span class="right carousel-control" data-slide="next" data-target="#Carousel">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </span>
-</div>
-
-<div class="mainIndex">
-  <br/>
-<br />
-<div align="center">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- RainyDayz Template Free 728 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-6091911878727341"
-     data-ad-slot="1613713719"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-<br />
-  <br/>
-  <div class="container">
-
-    <!-- Cabinets -->
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <h1>
-          <i class="fa fa-shopping-basket pull-right"></i>
-        </h1>
-        <h2>
-          <a href="#/Products">Shop Deals
-            <br/></a>
-          <i>by Category</i>
-        </h2>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <h2>
-          <i class="fa fa-archive">
-            <font>
-              <a href="#/best-deals">Best Deals</a>
-            </font>
-          </i>
-        </h2>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <h2>
-          <font>
-            <i class="fa fa-tachometer">
-              <a href="#/daily-deals">Daily Deals</a>
-            </i>
-          </font>
-        </h2>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <h2>
-          <i class="fa fa-shopping-basket"></i>
-              <i class="fa fa-comments"></i>
-          <i class="fa fa-archive pull-right"></i>
-          <i class="fa fa-tachometer pull-right"></i>
-        </h2>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-
-      <div class="jumbotron">
-        <h2>
-          <font>
-            <i class="fa fa-comments">
-              <a href="#/">
-                Blog</a>
-            </i>
-          </font>
-        </h2>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-</div>
 </div>

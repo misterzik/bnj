@@ -1,42 +1,35 @@
 <div ng-repeat="item in todos">
-
     <div class="container">
 
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#/Products/Category/Groceries/{{item.sku}}">
+                    <h3>{{item.name}}</h3>
+                </a>
+            </div>
 
-      <div class="row">
+            <div class="col-md-6">
+                <a href="#/Products/Category/Groceries/{{item.sku}}">
+                    <img ng-src="{{item.image}}">
+                </a>
+            </div>
 
-        <div class="col-md-5">
-        <a href="#/Products/Category/Jewelry/{{item.name}}">
+            <div class="col-md-6">
 
-          <h3>
-            {{item.name}}</h3>
+                <ins>
+                  Description
+                </ins>:
 
-        </a>
-      </div>
-</div>
+                <small>{{item.description}}</small>
 
-<div class="row">
-  <div class="col-md-1">
-  <a href="#/Products/Category/Jewelry/{{item.sku}}">
+                <br /><br />
+                <a ng-href="#/Products/Category/Groceries/{{item.sku}}" class="btn btn-success">
+                  View Product
+                </a>
+            </div>
+        </div>
 
-    <img ng-src="{{item.product_image}}" />
-
-  </a>
-</div>
-
-<div class="col-md-11">
-
-    <ins>Description</ins>: <small>{{item.product_quick_description}}</small>
-<br /><br />
-<a ng-href="{{item.product_link}}" target="_blank" class="btn btn-success">
-Get OFFER Now
-</a>
-</div>
-</div>
-
-</div>
+    </div>
 
 
 </div>
-
-<br /><br />

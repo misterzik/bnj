@@ -1,53 +1,27 @@
 <div class="container">
-
-  <h1>
-    <b># Daily Deals</b>
-  </h1>
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- RainyDayz Template Free 728 -->
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-6091911878727341"
-       data-ad-slot="1613713719"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <div ng-repeat="item in todos">
-
-    <div class="row">
-
-      <div class="col-md-5">
-        <a href="#/Products/Category/Jewelry/{{item.sku}}">
-
-          <h3>
-            {{item.product_title}}</h3>
-
-        </a>
-      </div>
+    <h1>
+        <b># Daily Deals</b>
+    </h1>
+    <div ng-repeat="item in todos">
+        <div class="row">
+            <div class="col-md-5">
+                <a href="#/Products/Category/Groceries/{{item.sku}}">
+                    <h3>
+                        {{item.name}}
+                    </h3>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <a href="#/Products/Category/Groceries/{{item.sku}}">
+                    <img ng-src="{{item.image}}" />
+                </a>
+            </div>
+            <div class="col-md-11">
+                <ins>Description</ins>:
+                <small>{{item.description}}</small>
+            </div>
+        </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-1">
-        <a href="#/Products/Category/Jewelry/{{item.sku}}">
-
-          <img ng-src="{{item.product_image}}"/>
-
-        </a>
-      </div>
-
-      <div class="col-md-11">
-
-        <ins>Description</ins>:
-        <small>{{item.product_quick_description}}</small>
-        <br/><br/>
-        <a class="btn btn-success" ng-href="{{item.product_link}}" target="_blank">
-          Get OFFER Now
-        </a>
-      </div>
-    </div>
-
-  </div>
-
 </div>
